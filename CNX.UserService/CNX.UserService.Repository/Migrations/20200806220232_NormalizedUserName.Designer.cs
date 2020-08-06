@@ -3,15 +3,17 @@ using System;
 using CNX.UserService.Repository.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CNX.UserService.Repository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20200806220232_NormalizedUserName")]
+    partial class NormalizedUserName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,21 +111,13 @@ namespace CNX.UserService.Repository.Migrations
                         .HasColumnName("name")
                         .HasColumnType("character varying");
 
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnName("normalized_email")
-                        .HasColumnType("character varying(256)")
-                        .HasMaxLength(256);
-
                     b.Property<string>("NormalizedUserName")
+                        .IsRequired()
                         .HasColumnName("normalized_user_name")
-                        .HasColumnType("character varying(256)")
+                        .HasColumnType("character varying")
                         .HasMaxLength(256);
 
                     b.Property<string>("PasswordHash")
-                        .HasColumnType("text");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnName("security_stamp")
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -132,11 +126,6 @@ namespace CNX.UserService.Repository.Migrations
                         .HasColumnType("timestamp without time zone")
                         .HasDefaultValue(null);
 
-                    b.Property<string>("UserName")
-                        .HasColumnName("user_name")
-                        .HasColumnType("character varying(256)")
-                        .HasMaxLength(256);
-
                     b.HasKey("Id");
 
                     b.HasIndex("Cpf")
@@ -144,9 +133,6 @@ namespace CNX.UserService.Repository.Migrations
 
                     b.HasIndex("Email")
                         .IsUnique();
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()

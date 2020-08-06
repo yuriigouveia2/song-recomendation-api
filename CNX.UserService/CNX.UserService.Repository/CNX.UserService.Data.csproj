@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200806183322_UpdateUser.cs" />
+    <Compile Remove="Migrations\20200806183322_UpdateUser.Designer.cs" />
+    <Compile Remove="Migrations\20200806184232_UpdatedAtUserOptional.cs" />
+    <Compile Remove="Migrations\20200806184232_UpdatedAtUserOptional.Designer.cs" />
+    <Compile Remove="Migrations\20200806192710_UpdateUser.cs" />
+    <Compile Remove="Migrations\20200806192710_UpdateUser.Designer.cs" />
+    <Compile Remove="Migrations\20200806193108_NormalizedUserName.cs" />
+    <Compile Remove="Migrations\20200806193108_NormalizedUserName.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6">

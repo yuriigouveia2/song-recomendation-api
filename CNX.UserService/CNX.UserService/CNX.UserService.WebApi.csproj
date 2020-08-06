@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CNX.UserService.Business\CNX.UserService.Business.csproj" />
-    <ProjectReference Include="..\CNX.UserService.Repository\CNX.UserService.Repository.csproj" />
+    <ProjectReference Include="..\CNX.UserService.Repository\CNX.UserService.Data.csproj" />
   </ItemGroup>
 
 

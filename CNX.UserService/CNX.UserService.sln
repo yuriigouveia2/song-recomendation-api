@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNX.UserService.Business", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNX.UserService.Model", "CNX.UserService.Model\CNX.UserService.Model.csproj", "{0B2A538A-8574-4AE3-AC52-1982244F830D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNX.UserService.Repository", "CNX.UserService.Repository\CNX.UserService.Repository.csproj", "{DAA883D3-F469-44ED-ACF2-A36885C10C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CNX.UserService.Data", "CNX.UserService.Repository\CNX.UserService.Data.csproj", "{DAA883D3-F469-44ED-ACF2-A36885C10C55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

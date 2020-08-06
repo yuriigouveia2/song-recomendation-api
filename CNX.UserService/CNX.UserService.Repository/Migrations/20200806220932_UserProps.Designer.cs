@@ -3,15 +3,17 @@ using System;
 using CNX.UserService.Repository.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CNX.UserService.Repository.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20200806220932_UserProps")]
+    partial class UserProps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -109,11 +111,6 @@ namespace CNX.UserService.Repository.Migrations
                         .HasColumnName("name")
                         .HasColumnType("character varying");
 
-                    b.Property<string>("NormalizedEmail")
-                        .HasColumnName("normalized_email")
-                        .HasColumnType("character varying(256)")
-                        .HasMaxLength(256);
-
                     b.Property<string>("NormalizedUserName")
                         .HasColumnName("normalized_user_name")
                         .HasColumnType("character varying(256)")
@@ -144,9 +141,6 @@ namespace CNX.UserService.Repository.Migrations
 
                     b.HasIndex("Email")
                         .IsUnique();
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()

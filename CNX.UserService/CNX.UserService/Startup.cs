@@ -25,6 +25,8 @@ using CNX.UserService.Repository.DataContext;
 using CNX.UserService.Business.AutoMapper;
 using CNX.UserService.Model.Types;
 using CNX.UserService.Model.Entities;
+using CNX.UserService.Model;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace CNX.UserService.WebApi
 {
@@ -109,6 +111,13 @@ namespace CNX.UserService.WebApi
                         .AddDefaultTokenProviders();
 
             builder.AddSignInManager<SignInManager<User>>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.Cookie.Expiration = TimeSpan.FromDays(5);
+                options.LoginPath = "/User/Login";
+            });
         }
         private void ConfigureJwt(IServiceCollection services)
         {
@@ -116,23 +125,23 @@ namespace CNX.UserService.WebApi
             services.Configure<AppSettings>(appSettingsSection);
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,
-                options =>
-                {
-                    options.RequireHttpsMetadata = false;
-                    options.SaveToken = true;
-                    options.TokenValidationParameters = new TokenValidationParameters
+                    options =>
                     {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = appSettings.Emissor,
-                        ValidAudience = appSettings.ValidoEm,
-                        IssuerSigningKey = new SymmetricSecurityKey(key),
-                    };
-                });
+                        options.RequireHttpsMetadata = false;
+                        options.SaveToken = true;
+                        options.TokenValidationParameters = new TokenValidationParameters
+                        {
+                            ValidateIssuer = true,
+                            ValidateAudience = true,
+                            ValidateLifetime = true,
+                            ValidateIssuerSigningKey = true,
+                            ValidAudience = appSettings.ValidIn,
+                            IssuerSigningKey = new SymmetricSecurityKey(key),
+                        };
+                    });
         }
         #endregion
 
@@ -155,6 +164,7 @@ namespace CNX.UserService.WebApi
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseCors("CorsPolicy");
             app.UseEndpoints(endpoints =>

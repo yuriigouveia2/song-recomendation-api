@@ -8,7 +8,6 @@ namespace CNX.UserService.Model.Entities
     {
         public string Name { get; set; }
         public string Cpf { get; set; }
-        public string Password { get; set; }
         public bool Deleted { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }

@@ -18,10 +18,15 @@ namespace CNX.UserService.Repository.Mappings
             builder.Property(x => x.Name).HasColumnName("name").HasColumnType(DbTypes.PostreSQL.Varchar);
             builder.Property(x => x.Cpf).HasColumnName("cpf").HasColumnType(DbTypes.PostreSQL.Varchar).IsRequired();
             builder.Property(x => x.Deleted).HasColumnName("deleted").HasDefaultValue(false).IsRequired();
-            builder.Property(x => x.CreatedAt).HasColumnName("created_at").HasDefaultValue();
-            builder.Property(x => x.UpdatedAt).HasColumnName("updated_at").IsRequired().HasDefaultValue();
+            builder.Property(x => x.CreatedAt).HasColumnName("created_at").IsRequired().HasDefaultValue();
+            builder.Property(x => x.UpdatedAt).HasColumnName("updated_at").HasDefaultValue();
             builder.Property(x => x.DeletedAt).HasColumnName("deleted_at").HasDefaultValue();
             builder.Property(x => x.Email).HasColumnName("email").HasColumnType(DbTypes.PostreSQL.Varchar).IsRequired();
+
+            builder.Property(x => x.UserName).HasColumnName("user_name");
+            builder.Property(x => x.NormalizedUserName).HasColumnName("normalized_user_name");
+            builder.Property(x => x.NormalizedEmail).HasColumnName("normalized_email");
+            builder.Property(x => x.SecurityStamp).HasColumnName("security_stamp");
 
             builder.HasIndex(x => new { x.Email }).IsUnique();
             builder.HasIndex(x => new { x.Cpf }).IsUnique();
@@ -32,12 +37,11 @@ namespace CNX.UserService.Repository.Mappings
             builder.Ignore(x => x.PhoneNumberConfirmed);
             builder.Ignore(x => x.PhoneNumber);
             builder.Ignore(x => x.ConcurrencyStamp);
-            builder.Ignore(x => x.SecurityStamp);
-            builder.Ignore(x => x.PasswordHash);
+            //builder.Ignore(x => x.SecurityStamp);
             builder.Ignore(x => x.EmailConfirmed);
-            builder.Ignore(x => x.NormalizedEmail);
-            builder.Ignore(x => x.NormalizedUserName);
-            builder.Ignore(x => x.UserName);
+            //builder.Ignore(x => x.NormalizedEmail);
+            //builder.Ignore(x => x.NormalizedUserName);
+            //builder.Ignore(x => x.UserName);
             builder.Ignore(x => x.LockoutEnabled);
             builder.Ignore(x => x.AccessFailedCount);
             #endregion

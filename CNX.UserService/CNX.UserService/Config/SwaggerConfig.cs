@@ -56,7 +56,7 @@ namespace CNX.UserService.WebApi
             _this.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
                 In = ParameterLocation.Header,
-                Description = "Primeiro é necessário gerar o 'token' via login no Usuario/Login em seguida insira 'Bearer ' + token no campo Value",
+                Description = "Primeiro é necessário gerar o 'token' via login no User/Login em seguida insira 'Bearer ' + token no campo Value",
                 Name = "Authorization",
                 Type = SecuritySchemeType.ApiKey
             });
