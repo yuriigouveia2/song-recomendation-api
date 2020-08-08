@@ -1,4 +1,4 @@
-﻿namespace CNX.UserService.Repository.DataContext
+﻿namespace CNX.UserService.Data.DataContext
 {
     public class SeedData
     {

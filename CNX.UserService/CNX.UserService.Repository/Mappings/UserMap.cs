@@ -5,6 +5,8 @@ using CNX.UserService.Model.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace CNX.UserService.Repository.Mappings
 {
@@ -22,11 +24,13 @@ namespace CNX.UserService.Repository.Mappings
             builder.Property(x => x.UpdatedAt).HasColumnName("updated_at").HasDefaultValue();
             builder.Property(x => x.DeletedAt).HasColumnName("deleted_at").HasDefaultValue();
             builder.Property(x => x.Email).HasColumnName("email").HasColumnType(DbTypes.PostreSQL.Varchar).IsRequired();
+            builder.Property(x => x.HometownId).IsRequired().HasColumnName("hometown_id");
 
             builder.Property(x => x.UserName).HasColumnName("user_name");
             builder.Property(x => x.NormalizedUserName).HasColumnName("normalized_user_name");
             builder.Property(x => x.NormalizedEmail).HasColumnName("normalized_email");
             builder.Property(x => x.SecurityStamp).HasColumnName("security_stamp");
+            builder.Property(x => x.PasswordHash).HasColumnName("password_hash");
 
             builder.HasIndex(x => new { x.Email }).IsUnique();
             builder.HasIndex(x => new { x.Cpf }).IsUnique();

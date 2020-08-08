@@ -1,0 +1,12 @@
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.deps.json
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.dll
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.csprojAssemblyReference.cache
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.AssemblyInfoInputs.cache
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.AssemblyInfo.cs
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.pdb
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.dll
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.pdb
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.csproj.CoreCompileInputs.cache
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.csproj.CopyComplete
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.dll
+C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Data\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Data.pdb

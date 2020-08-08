@@ -14,12 +14,10 @@ namespace CNX.UserService.WebApi.Controllers
     public class MainController : ControllerBase
     {
         private readonly INotifier _notifier;
-        private readonly IUserBusiness _userBusiness;
 
-        public MainController(IMapper mapper, INotifier notifier, IUserBusiness userBusiness)
+        public MainController(IMapper mapper, INotifier notifier)
         {
             _notifier = notifier;
-            _userBusiness = userBusiness;
         }
 
         protected bool OperationIsValid()

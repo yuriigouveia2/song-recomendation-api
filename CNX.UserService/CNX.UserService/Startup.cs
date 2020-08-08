@@ -21,7 +21,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using CNX.UserService.Repository.DataContext;
+using CNX.UserService.Data.DataContext;
 using CNX.UserService.Business.AutoMapper;
 using CNX.UserService.Model.Types;
 using CNX.UserService.Model.Entities;
@@ -78,7 +78,7 @@ namespace CNX.UserService.WebApi
             this.ConfigureJwt(services);
 
             services.AddCors(options =>
-            {   //TODO Especificar a origem para evitar que aplicações de terceiros realizem requisições.
+            { 
                 options.AddPolicy("CorsPolicy", builder =>
                 {
                     builder.SetIsOriginAllowed(_ => true)

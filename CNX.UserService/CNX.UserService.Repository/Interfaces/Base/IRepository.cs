@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CNX.UserService.Repository.Interfaces.Base
+namespace CNX.UserService.Data.Interfaces.Base
 {
     public interface IRepository<T> where T : BaseEntity
     {

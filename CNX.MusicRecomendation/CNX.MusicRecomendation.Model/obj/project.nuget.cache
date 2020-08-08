@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AZ1Xb08yC9qNX6kuBRLhkr6F45S48yNtOqfgYJXYmn7WUVjdRF3LklaEvQwJzl2OVEK+Ag7idLBXcyRoFWQUsw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ycostag\\Documents\\YURI\\CNX\\song-recomendation-api\\CNX.MusicRecomendation\\CNX.MusicRecomendation.Model\\CNX.MusicRecomendation.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ycostag\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

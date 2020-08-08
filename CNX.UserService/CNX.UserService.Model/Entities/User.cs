@@ -9,6 +9,7 @@ namespace CNX.UserService.Model.Entities
         public string Name { get; set; }
         public string Cpf { get; set; }
         public bool Deleted { get; set; }
+        public int HometownId { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }

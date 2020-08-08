@@ -28,5 +28,7 @@
     <ProjectReference Include="..\CNX.UserService.Repository\CNX.UserService.Data.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 
 </Project>

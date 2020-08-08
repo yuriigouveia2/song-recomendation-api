@@ -9,7 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace CNX.UserService.Repository.DataContext
+namespace CNX.UserService.Data.DataContext
 {
     public class UserContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {

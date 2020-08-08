@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Linq;
-using CNX.UserService.Repository.DataContext;
-using CNX.UserService.Repository.Interfaces;
+using CNX.UserService.Data.DataContext;
 using CNX.UserService.Model.Entities;
 using CNX.UserService.Model.Types;
 using System.Threading.Tasks;
 using System.Transactions;
+using CNX.UserService.Model.Dtos.User;
+using CNX.UserService.Data.Interfaces;
 
-namespace CNX.UserService.Repository.Classes
+namespace CNX.UserService.Data.Classes
 {
     public class UserRepository : IUserRepository
     {
         private readonly UserContext _context;
-        public UserRepository(UserContext context)
+        private readonly ICityRepository _cityRepository;
+        public UserRepository(UserContext context, ICityRepository cityRepository)
         {
             _context = context;
+            _cityRepository = cityRepository;
         }
 
-        public bool CheckCpf(Cpf cpf) => _context.Users.Any(prop => prop.Cpf.Equals(cpf.ToString()));
+        public bool IsCpfRegistered(Cpf cpf) => _context.Users.Any(prop => prop.Cpf.Equals(cpf.ToString()));
 
-        public bool CheckEmail(Email email) => _context.Users.Any(prop => prop.Email.ToUpper().Equals(email.ToUpper()));
+        public bool IsEmailRegistered(Email email) => _context.Users.Any(prop => prop.Email.ToUpper().Equals(email.ToUpper()));
 
         public void Create(User user)
         {
@@ -43,6 +46,7 @@ namespace CNX.UserService.Repository.Classes
             throw new NotImplementedException();
         }
 
+        public City FindCity(UserDto userDto) => _cityRepository.FindCityByName(userDto.Hometown);
         public User GetByCpf(Cpf cpf) => _context.Users.FirstOrDefault(x => x.Cpf.Equals(cpf.ToString()));
         public User GetByEmail(Email email) => _context.Users.FirstOrDefault(x => x.Email.Equals(email.ToString()));
 

@@ -43,7 +43,7 @@ namespace CNX.UserService.WebApi.Controllers
                               SignInManager<User> signInMananger,
                               IOptions<AppSettings> appSettings,
                               IMapper mapper,
-                              INotifier notifier) : base(mapper, notifier, userBusiness)
+                              INotifier notifier) : base(mapper, notifier)
         {
             _client = new HttpClient();
             _appSettings = appSettings.Value;
@@ -65,7 +65,7 @@ namespace CNX.UserService.WebApi.Controllers
             }
             catch (Exception ex)
             {
-                Notify("An error ocurred while creating an user.");
+                Notify("An error ocurred while creating an user.", ex?.InnerException?.Message);
                 return CustomResponse();
             }
         }

@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using CNX.UserService.Repository.DataContext;
+using CNX.UserService.Data.DataContext;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CNX.UserService.Repository.Interfaces.Base;
+using CNX.UserService.Data.Interfaces.Base;
 using CNX.UserService.Model.Entities.Base;
 
-namespace CNX.UserService.Repository.Classes.Base
+namespace CNX.UserService.Data.Classes.Base
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
