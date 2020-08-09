@@ -1,9 +1,0 @@
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.deps.json
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.dll
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\bin\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.pdb
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.csprojAssemblyReference.cache
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.AssemblyInfoInputs.cache
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.AssemblyInfo.cs
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.dll
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.pdb
-C:\Users\ycostag\Documents\YURI\CNX\song-recomendation-api\CNX.MusicRecomendation\CNX.MusicRecomendation.Model\obj\Debug\netcoreapp3.1\CNX.MusicRecomendation.Model.csproj.CoreCompileInputs.cache

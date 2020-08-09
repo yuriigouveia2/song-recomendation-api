@@ -33,7 +33,6 @@ namespace CNX.MusicRecomendation
 
         public IConfiguration Configuration { get; }
 
-        private const string _weatherApiKey = "ec54963e1337381c82e762136bc1eef1";
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {

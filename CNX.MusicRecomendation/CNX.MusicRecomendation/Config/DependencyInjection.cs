@@ -25,6 +25,7 @@ namespace CNX.MusicRecomendation.Config
         private static void BusinessInjection(IServiceCollection services)
         {
             services.AddTransient<IWeatherBusiness, WeatherBusiness>();
+            services.AddTransient<IMusicRecomendationBusiness, MusicRecomendationBusiness>();
         }
 
         private static void RepositoryInjection(IServiceCollection services)
