@@ -1,0 +1,70 @@
+{
+  "Routes": [
+    // User API
+    {
+      "DownstreamPathTemplate": "/api/user-service/user",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/user-service/user",
+      "UpstreamHttpMethod": [ "POST", "PUT", "PATCH", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user-service/user/login",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/user-service/user/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user-service/user/validate-jwt",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "userservice",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/user-service/user/validate-jwt",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    // Weather API
+    {
+      "DownstreamPathTemplate": "/api/music-recomendation/weather",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "weatherservice",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/music-recomendation/weather",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    // Log API
+    {
+      "DownstreamPathTemplate": "/api/log-service/log",
+      "DownstreamPathScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "logservice",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/log-service/log",
+      "UpstreamHttpMethod": [ "POST" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId" 
+  }
+}

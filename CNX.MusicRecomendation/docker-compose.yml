@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  weatherservice:
+    image: ${DOCKER_REGISTRY-}weatherservice
+    build:
+      context: .
+      dockerfile: src/WeatherService/CNX.WeatherService.WebApi/Dockerfile
+
+  userservice:
+    image: ${DOCKER_REGISTRY-}userservice
+    build:
+      context: .
+      dockerfile: src/UserService/CNX.UserService.WebApi/Dockerfile
+
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/CNX.ApiGateway/Dockerfile
+
+
+  logservice:
+    image: ${DOCKER_REGISTRY-}logservice
+    build:
+      context: .
+      dockerfile: src/LogService/CNX.LogService.WebApi/Dockerfile
+
