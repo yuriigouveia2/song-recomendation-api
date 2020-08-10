@@ -3,7 +3,9 @@ Microservice API  created to register a user and recommend songs based on hometo
 
  ## Instalation guide
  To use this application you need to have Docker and .NET Core 3.1 installed on your local machine. 
+ 
  After installing those tools you need to create TWO DIFFERENT DATABASES, one for the User Service and other for the Log Service. 
+ 
  You can use the current database credentials, they are available for public use and you do so, you don't need to change anything. In case you want to use your own database you need to replace the current database credentials, using the format "Host=YOUR_HOST; Database=YOUR_DATABASE; Username=YOUR_USERNAME; Password=YOUR_PASSWORD", on the files listed below (change in the lines indicated) to your custom database:
   * `song-recomendation-api/CNX.MusicRecomendation/src/LogService/CNX.LogService.Data/DataContext/LogContext.cs`        -> Line 26
   
@@ -37,6 +39,7 @@ Microservice API  created to register a user and recommend songs based on hometo
 | Log     | /log-service/log                | POST                  |
 
   You can see the Api Gateway route configuration on `song-recomendation-api/CNX.MusicRecomendation/src/ApiGateway/CNX.ApiGateway/ocelot.json`.
+  
   After all those steps, you can use the application according to the business rules.
   
  ## Future improvements
