@@ -53,7 +53,7 @@ Microservice API  created to register a user and recommend songs based on hometo
  - The user service does not reset the password;
  - The user service does not have a forgot password mechanism;
  - Improve performance while reading city.list.json (to not allocate all the list in memory);
- - Use queue to log the requests;
+ - Use queue to log the requests and use a nosql database;
  - Use redis to cache weather from cities;
   
  ## Architecture
