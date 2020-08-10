@@ -6,14 +6,21 @@ Microservice API  created to register a user and recommend songs based on hometo
  After installing those tools you need to create TWO DIFFERENT DATABASES, one for the User Service and other for the Log Service. 
  You can use the current database credentials, they are available for public use and you do so, you don't need to change anything. In case you want to use your own database you need to replace the current database credentials, using the format "Host=YOUR_HOST; Database=YOUR_DATABASE; Username=YOUR_USERNAME; Password=YOUR_PASSWORD", on the files listed below (change in the lines indicated) to your custom database:
   * `song-recomendation-api/CNX.MusicRecomendation/src/LogService/CNX.LogService.Data/DataContext/LogContext.cs`        -> Line 26
+  
   * `song-recomendation-api/CNX.MusicRecomendation/src/LogService/CNX.LogService.WebApi/appsettings.json`               -> Line 3
+  
   * `song-recomendation-api/CNX.MusicRecomendation/src/LogService/CNX.LogService.WebApi/appsettings.Development.json`   -> Line 3
+  
   * `song-recomendation-api/CNX.MusicRecomendation/src/UserService/CNX.UserService.Data/DataContext/UserContext.cs`     -> Line 30
+  
   * `song-recomendation-api/CNX.MusicRecomendation/src/UserService/CNX.UserService.WebApi/appsettings.json`             -> Line 3
+  
   * `song-recomendation-api/CNX.MusicRecomendation/src/UserService/CNX.UserService.WebApi/appsettings.Development.json` -> Line 3
   
   If you choose to use the current database, you can skip to the `Application usage` section. If you choose to use your own database, run the command below at the path indicated:
+  
   Path -> `song-recomendation-api/CNX.MusicRecomendation/src/LogService/CNX.LogService.Data`   -> $ Update-Database
+  
   Path -> `song-recomendation-api/CNX.MusicRecomendation/src/UserService/CNX.UserService.Data` -> $ Update-Database 
  
  ## Application usage
