@@ -77,4 +77,4 @@ When you login into the application you receive a JWT token and to use this toke
  - SpotifyWeb Api: Api used to get a playlist based on the city temperature returned from Open Weather Api.
 
  ### Log Microservice
- - LoggingRequestMiddleware: custom middleware create for logging all the requests on a separeted database.
+ - LoggingRequestMiddleware: custom middleware created for logging all the requests on a separeted database.
