@@ -33,7 +33,7 @@ namespace CNX.UserService.WebApi.Controllers
             try
             {
                 await _logBusiness.Create(log);
-                return CustomResponse();
+                return CustomResponse("Log saved.");
             }
             catch (Exception ex)
             {

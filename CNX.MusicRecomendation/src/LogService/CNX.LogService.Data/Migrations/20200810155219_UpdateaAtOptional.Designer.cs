@@ -3,15 +3,17 @@ using System;
 using CNX.LogService.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CNX.LogService.Data.Migrations
 {
     [DbContext(typeof(LogContext))]
-    partial class LogContextModelSnapshot : ModelSnapshot
+    [Migration("20200810155219_UpdateaAtOptional")]
+    partial class UpdateaAtOptional
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

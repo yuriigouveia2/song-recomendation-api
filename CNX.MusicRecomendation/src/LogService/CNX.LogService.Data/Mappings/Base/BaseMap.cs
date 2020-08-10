@@ -20,7 +20,7 @@ namespace CNX.LogService.Repository.Mappings.Base
                 .HasDefaultValue(false)
                 .IsRequired();
             builder.Property(x => x.CreatedAt).HasColumnName("created_at").HasDefaultValue();
-            builder.Property(x => x.UpdatedAt).HasColumnName("updated_at").IsRequired().HasDefaultValue();
+            builder.Property(x => x.UpdatedAt).HasColumnName("updated_at").HasDefaultValue();
             builder.Property(x => x.DeletedAt).HasColumnName("deleted_at").HasDefaultValue();
         }
     }

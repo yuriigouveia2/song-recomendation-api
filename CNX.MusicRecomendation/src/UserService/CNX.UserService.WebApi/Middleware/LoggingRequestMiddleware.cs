@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CNX.WeatherService.WebApi.Middleware
+namespace CNX.UserService.WebApi.Middleware
 {
     public class LoggingRequestMiddleware
     {

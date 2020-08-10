@@ -30,7 +30,7 @@ namespace CNX.LogService.Data.Classes
                     log.Deleted = false;
 
                     await _context.Logs.AddAsync(log);
-                    await _context.SaveChangesAsync();
+                    _context.SaveChanges();
                     scope.Complete();
                 }
                 catch

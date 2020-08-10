@@ -90,6 +90,7 @@ namespace CNX.WeatherService
                 });
             }
 
+            app.UseLoggingRequest();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
@@ -99,7 +100,6 @@ namespace CNX.WeatherService
             {
                 endpoints.MapControllers();
             });
-            app.UseMiddleware<LoggingRequestMiddleware>();
         }
     }
 }

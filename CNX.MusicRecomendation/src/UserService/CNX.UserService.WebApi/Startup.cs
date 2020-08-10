@@ -27,6 +27,7 @@ using CNX.UserService.Model.Types;
 using CNX.UserService.Model.Entities;
 using CNX.UserService.Model;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using CNX.UserService.WebApi.Middleware;
 
 namespace CNX.UserService.WebApi
 {
@@ -162,6 +163,7 @@ namespace CNX.UserService.WebApi
                 });
             }
 
+            app.UseLoggingRequest();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthentication();
