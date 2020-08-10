@@ -40,7 +40,13 @@ Microservice API  created to register a user and recommend songs based on hometo
 
   You can see the Api Gateway route configuration on `song-recomendation-api/CNX.MusicRecomendation/src/ApiGateway/CNX.ApiGateway/ocelot.json`.
   
-  After all those steps, you can use the application according to the business rules.
+  After all those steps, you can use the application according to the business rules and the following endpoints:
+  
+  * `/user-service/user` - POST -> Create an account (Dto to post on body: UserDto).
+  
+  * `/user-service/user/login` - POST -> Login (Dto to post on body: LoginDto).
+  
+  * `/music-recomendation/weather` - GET -> Get a playlist recomendation based on user logged (no body required).
   
  ## Future improvements
  - The user service does not accept notes;
